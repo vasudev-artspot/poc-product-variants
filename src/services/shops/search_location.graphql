@@ -1,0 +1,17 @@
+query locations {
+  postalCodeLocationQuery(postalCode: "517125") {
+    ... on PostalCodeLocationQueryError {
+      code
+      message
+    }
+    ... on PostalCodeLocationQuerySuccess {
+      __typename
+      location {
+        city
+        country
+        state
+        identifier
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "name": "react_content_frontend",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/content",
+  "proxy": "http://ec2-3-21-168-192.us-east-2.compute.amazonaws.com:8000/graphql",
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!(axios)/)"
+    ]
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@hookform/error-message": "^2.0.1",
+    "@hookform/resolvers": "^3.3.4",
+    "@mui/icons-material": "^5.16.6",
+    "@mui/material": "^5.16.7",
+    "@tanstack/react-query": "^5.68.0",
+    "@testing-library/user-event": "^13.5.0",
+    "ajv": "^8.12.0",
+    "ajv-errors": "^3.0.0",
+    "apollo-upload-client": "^18.0.1",
+    "axios": "^1.7.2",
+    "axios-mock-adapter": "^1.22.0",
+    "cloudinary": "^2.4.0",
+    "draft-js": "^0.11.7",
+    "fs": "^0.0.1-security",
+    "graphql-request": "^6.1.0",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "qs": "^6.14.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.56.4",
+    "react-modal": "^3.16.1",
+    "react-query": "^3.39.3",
+    "react-relay": "^16.2.0",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.8.1",
+    "react-toastify": "^10.0.5",
+    "relay-runtime": "^16.2.0",
+    "use-debounce": "^10.0.4",
+    "web-vitals": "^2.1.4",
+    "zod": "^3.23.8"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react",
+      "@babel/preset-typescript"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.9",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^14.3.1",
+    "@types/draft-js": "^0.11.18",
+    "@types/jest": "^27.5.2",
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.17.7",
+    "@types/react-dropzone": "^5.1.0",
+    "@types/react-modal": "^3.16.3",
+    "autoprefixer": "^10.4.19",
+    "babel-plugin-relay": "^16.2.0",
+    "cypress": "^13.17.0",
+    "graphql": "^16.11.0",
+    "jest": "^27.5.1",
+    "jest-watch-typeahead": "^1.1.0",
+    "postcss": "^8.4.39",
+    "prettier": "^3.2.5",
+    "react-modal": "^3.16.1",
+    "relay-compiler": "^16.2.0",
+    "tailwindcss": "^3.4.4",
+    "ts-jest": "^27.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^4.9.5"
+  }
+}

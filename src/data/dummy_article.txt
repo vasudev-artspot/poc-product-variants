@@ -1,0 +1,42 @@
+Title:
+Make react image upload component easier with react-images-uploading and your UI
+
+
+Intro Text:
+Hello everyone. Like the title I named above, this is a post I want to introduce my first public React component on Npm. I hope it will save your time because it saves my time (but after I take the time to try to write it lol).
+
+
+Image Upload
+
+
+Sub-title:
+Introduction
+
+
+Description content:
+React-images-uploading is a react component with just logic code helping select image(s) to show on UI and preparing to upload. Just logic code means no UI, no CSS and depends on your UI.
+
+This module was born for resolving my working task absolutely. Before I code it I have researched some image upload components, and realize that almost all have logic and UI already. It is good if you just make a baby project for fun and do not (or a little bit) care about the UI. But in my working, I have to refer to the design, and other components force me to override CSS. So I make my module as abstract as possible.
+
+
+Sub-title:
+Using
+
+
+Description content:
+To install :
+
+npm install --save react-images-uploading
+or
+yarn add react-images-uploading
+
+
+Image upload
+
+
+Sub-title:
+Conclusion
+
+
+Description content:
+React-images-uploading is still improves day by day. I will make it support some cases like size image, type of image, resolution…

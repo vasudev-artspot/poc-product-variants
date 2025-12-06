@@ -1,0 +1,42 @@
+Article flow:
+
+1. Create Tab:
+    1. We should add new buttons at top [1.Create New & 2.Preview (with icons only & tooltip)]
+        1. Create New button - If user wants to write on new idea and drop the current one, then he should be able to start writing new article with saving of the current article in draft.
+        2. Preview button - We have already too many buttons at down, so we should move the preview at top.
+
+    2. User can write article with adding/removing dynamic fields, and Publish the article.
+    3. After Publish user will be redirect to the View all tab to check the published article are there and it will be first (descending order).
+    4. During the article writing if user wants to preview then it will be shown in the dialoge box.
+    5. If user wants to Reset the whole form then with confirmation box he is able to do it.
+
+    6. Save as Draft:
+        1. On every 60 seconds, if there is a changes in the article form then local storage will update the article details without clicking the save as draft.
+        2. On click the 'Save as Draft' button, article will be saved in the table with the status 'draft' & also the local storage updated with the latest article details.
+        
+        Q: What if user click on 'Save as Draft' button again?
+        A: On first time click on 'Save as Draft' button, we will store the article and in the response of save API backend send the details of the last saved article with generated id (we will save this article details in the local storage with the id). So in the frontend we will take the response and assign it to the current article form, that means user still writing the same article on Create tab. If user again hit the 'Save as Draft' button then we will update the article using the id stored in the local storage with update API.
+
+2. Drafts Tab:
+    1. User can see a list of all draft articles same as view all list. There user have options to edit or delete.
+    2. On the click of the edit button user will redirected to the Create tab with filled form.
+    3. On Create tab, user able to do changes and publish the updated article & redirect to view all tab.
+    4. During the update article user able to Save as Draft, Preview Or reset same way we have in the Create.
+
+3. View All Tab:
+    1. User have list of all published articles, he can edit, delete and link the article smoothly here.
+
+4. Preview/Edit Tab:
+    1. Initially this tab will be disable if there is no article is stored in the local storage within the 'publish' status, else the tab will be visible for that article with the latest changes in the local storage.
+    2. On edit button click from View all tab, user will redirect to this tab with the id of the particular article and filled form.
+    3. User can updates the article and publish, on the publish button click the article in the local storage withing the piblish status will be clear & user redirect to the View all tab.
+    4. We need to remove the 'Save as Draft' button, instead of it we will store the article details on every 60 seconds if there is a changes. The Save as Draft creates confusion for user, as he thinks that the published article will be now save in the draft. But already published article should not be in the drafts list, so we don't need to showcase a 'Save as Draft' button in edit.
+    5. On edit tab after 60 seconds the article stored into the local storage, now if user wants to go to any other tab or other page then he can move. When he come back on the Article menu then the Preview/Edit tab is enable as we have one published article in the local storage with updating mode. so, user can go in the Preview/Edit tab and continues to update that article.
+
+    Q: What if user now (when there is a already article with edit mode) again go to the View all tab and click on the other article's edit button?
+    A: Then the article which is currently user editing is clear from the edit tab & also the local storage will be clear. The other article will take place the editing mode now.
+
+    6. Reset:
+        Q: On Reset the whole form will be clear? If yes, then it is not good because the article is published the all fields should be not removed by reset. Else, the only new added changes will be reset? But it will be bit complicated for us to remove dynamic fields and values from form.
+
+        Possible Way: We should remove the Reset button because there are not much changes that need to be reset in the edit. For new added field or values, user have to remove or reset by own self.

@@ -1,0 +1,18 @@
+mutation updateProd($productUpdateInput: ProductUpdateInput) {
+  updateProduct(productUpdateInput: $productUpdateInput) {
+    productUpdateResult {
+      ... on ProductMutationSuccess {
+        product {
+          title
+          description
+          salePrice
+        }
+      }
+      
+      ... on ProductMutationError{
+        errors
+        code
+      }
+    }
+  }
+}

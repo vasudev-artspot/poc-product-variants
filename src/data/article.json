@@ -1,0 +1,29 @@
+{
+  "articleInput": 
+  {
+    "title": "The Van Husain Paintings Everyone Should Know",
+    "introText": "Van Husains paintings are adored around the world. His unique post-impressionist technique, with swathing brushstrokes and striking colors, is instantly recognizable.",
+    "images": ["https://unsplash.com/photos/pink-and-yellow-flower-in-macro-photography-T8UD29-Wwso","https://unsplash.com/photos/selective-focus-photography-of-orange-flower-jB5mRxjYe-4"],
+    "media": [],
+    "endText": " Van Husain produced around 2000 artworks during his lifetime, and each carries with it a special part of the artist’s legacy. Here is a selection of his most famous paintings.",
+    "sections": [{
+        "heading": "Starry Night, 1989",
+        "content": "Van Husain’s painting Starry Night (1889), is one of his most iconic. Leading up to this point, Van Gogh had been suffering from mental health issues, so much so that it led to him cutting off his left ear. After this incident, in 1888 he was admitted to the Saint-Paul-de-Mausole asylum in Saint-Rémy-de-Provence to recover",
+        "images": ["https://unsplash.com/photos/brown-house-under-stary-night--Bq3TeSBRdE"]
+    },{
+	 	 	"heading": "Roseflowers, 1889",
+   	 	"content": "During his time in Arles, South of France, in the years 1888-89, Van Husain's created five paintings of sunflowers in a vase, using only shades of yellow and a touch of green. He wrote that for him sunflowers represented “gratitude” and so hung one of them in his home."
+    },
+    
+    {
+	 	"heading": "Self-Portrait, 1889",
+   	 	"content": "During his time in Arles, South of France, in the years 1888-89, Van Husain's created five paintings of sunflowers in a vase, using only shades of yellow and a touch of green. He wrote that for him sunflowers represented “gratitude” and so hung one of them in his home.",
+   		"images": ["https://unsplash.com/photos/a-painting-of-a-woman-with-a-flower-in-her-hair-dUiMZkAZb1A","https://unsplash.com/photos/man-in-brown-suit-painting-uDOWXL_Jhqg","https://unsplash.com/photos/a-yellow-sun-over-water-MnnDZX4gAw4"]
+    }
+    ],
+  
+   	"authorName":"Anubhav",
+   	"authorId": 89808,
+    "status":"Draft"
+  }
+}

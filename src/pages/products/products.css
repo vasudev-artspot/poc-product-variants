@@ -1,0 +1,23 @@
+.upload-container {
+    width: 140px;
+    height: 140px;
+    border: 2px dashed #d1d5db; /* Tailwind's gray-300 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .upload-container img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .upload-container span {
+    text-decoration: underline;
+    font-size: 0.875rem; /* Tailwind's text-sm */
+    color: #6b7280; /* Tailwind's gray-500 */
+  }
+  

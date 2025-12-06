@@ -1,0 +1,15 @@
+.git
+node_modules
+**/node_modules
+**/build
+**/dist
+**/.cache
+**/.npm
+**/.pnpm-store
+.vscode
+.DS_Store
+*.log
+.env
+.env.*
+!.env.development
+!.env.production

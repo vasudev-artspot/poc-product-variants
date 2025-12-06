@@ -1,0 +1,29 @@
+import { gql, request } from "graphql-request";
+
+export const createArticleQuery = gql`
+mutation createArticle($articleInput: ArticleInput!) {
+  createArticle(articleInput: $articleInput) {
+    articleCreateResult {
+      __typename
+      ... on ArticleMutationSuccess {
+        code
+        message
+        article {
+          title
+          introText
+          sections
+          images
+          media
+          authorId
+          authorName
+        }
+      }
+      ... on ArticleMutationError {
+        code
+        message
+        errors
+      }
+    }
+  }
+}
+`;

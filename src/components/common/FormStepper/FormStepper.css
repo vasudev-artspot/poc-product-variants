@@ -1,0 +1,167 @@
+.timeline {
+    margin: 50px 95px;
+    height: 4px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.timeline-progress {
+    width: 0;
+    height: 100%;
+    background-color: #246ee9;
+    top: 0;
+    left: 0;
+}
+
+.timeline-items {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-item {
+    position: relative;
+}
+
+.timeline-number {
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    background-color: white;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    font-size: 14px;
+    color: grey;
+    font-weight: bold;
+    border: 3px solid #ccc;
+}
+
+.timeline-content {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.timeline-item.active .timeline-progress {
+    width: 100%;
+    background-color: #246ee9;
+    transition: width 0.5s ease;
+}
+
+.timeline-item.active .timeline-number {
+    background-color: #246ee9;
+    color: white;
+    border: none;
+}
+
+.timeline-item.completed {
+    background-color: white;
+}
+
+.timeline-item.completed .timeline-number {
+    background-color: white;
+    border: 3px solid #246ee9;
+    color: #246ee9;
+}
+
+.timeline-item.completed .timeline-content {
+    color: #246ee9;
+}
+
+.box-content-shop {
+    position: relative;
+    top: 30px;
+    border: 1px Solid grey;
+    margin: 40px;
+    padding-left: 30px;
+}
+
+.listings-timeline {
+    margin: 30px 40px;
+    height: 4px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.listings-timeline-progress {
+    width: 0;
+    height: 100%;
+    background-color: #246ee9;
+    top: 0;
+    left: 0;
+}
+
+.listings-timeline-items {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listings-timeline-item {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.listings-timeline-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #246ee9;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.listings-timeline-content {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.listings-timeline-item.active .listings-timeline-progress {
+    width: 100%;
+    background-color: #246ee9;
+    transition: width 0.5s ease;
+}
+
+.listings-timeline .listings-timeline-item.completed {
+    background-color: #246ee9;
+    border: 2px solid #246ee9;
+}
+
+.listings-timeline-item.completed .listings-timeline-content {
+    color: #246ee9;
+}
+
+.listings-timeline-item.active {
+    background-color: #ccc;
+    border: 5px solid #246ee9;
+    color: black;
+}

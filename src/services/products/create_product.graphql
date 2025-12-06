@@ -1,0 +1,15 @@
+mutation createProd($productData: ProductInput){
+  createProduct(productInput: $productData){
+		productCreateResult{
+      ... on ProductMutationSuccess{
+        product{
+          title
+          description
+          salePrice
+          
+        }
+      }
+    }
+  }
+}
+

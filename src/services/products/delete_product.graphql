@@ -1,0 +1,12 @@
+mutation deleteProd($productDeleteInput: ProductDeleteInput){
+  deleteProduct(productDeleteInput : $productDeleteInput){
+    productDeleteResult{
+     ... on ProductDeleteMutationSuccess{
+      	code
+    }
+      ... on ProductMutationError{
+        code
+      }
+    }
+  }
+}

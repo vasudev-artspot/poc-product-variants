@@ -1,0 +1,19 @@
+mutation createShop($shopInput: ShopInput!) {
+  createShop(shopInput: $shopInput) {
+    __typename
+    shopCreateResult {
+      ... on ShopMutationSuccess {
+        message
+        shop {
+          name
+        }
+      }
+
+      ... on ShopMutationError {
+        code
+        message
+        errors
+      }
+    }
+  }
+}
