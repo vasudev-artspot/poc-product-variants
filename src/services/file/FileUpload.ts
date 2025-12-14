@@ -8,10 +8,13 @@ import { CONTENT_SERVICE_URL } from "../constants"; // Make sure this ends with 
  */
 
 const CONTENT_TYPE_ENUM: Record<string, number> = {
-  THING: 0,
-  SHOP: 1,
-  ARTICLE: 2,
-  // add more as defined in your backend schema
+  DEFAULT: 0,
+  THING: 1,
+  SHOP: 2,
+  PRODUCT: 3,
+  ARTICLE: 4,
+  LOCATION: 5,
+  STORY: 6,
 };
 
 export const uploadFiles = async (
@@ -41,7 +44,7 @@ export const uploadFiles = async (
     variables: {
       files: files.map(() => null),
       filesMetadata: files.map(() => ({
-        contentType: CONTENT_TYPE_ENUM[metadata?.contentType || "THING"],
+        contentType: CONTENT_TYPE_ENUM[metadata?.contentType || "DEFAULT"],
         mediaSubType: "CARD",
       })),
     },

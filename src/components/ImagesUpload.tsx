@@ -121,15 +121,12 @@ const ImagesUpload = ({
           previewUrl: `${BUCKET_URL}${file.fileName}`,
         }));
 
-        setUploadedImages((prev: any[]) => {
-          const filtered = prev.filter(
-            (img) =>
-              !successful.some(
-                (s: any) => s.originalFileName === img.originalFileName
-              )
-          );
-          return [...filtered, ...successItems];
-        });
+        const filtered = uploadedImages.filter(
+          (img: any) =>
+            !successful.some((s: any) => s.originalFileName === img.originalFileName)
+        );
+
+        setUploadedImages([...filtered, ...successItems]);
 
         setUploadErrors((prev: any[]) =>
           prev
@@ -199,9 +196,8 @@ const ImagesUpload = ({
   const handleDeleteFile = async (fileName: string) => {
     try {
       await deleteFile(fileName);
-      setUploadedImages((prev: any) =>
-        prev.filter((img: any) => img.fileName !== fileName)
-      );
+      const updated = uploadedImages.filter((img: any) => img.fileName !== fileName);
+      setUploadedImages(updated);
       setDeleteMessage("File deleted successfully");
     } catch (error) {
       console.error("Failed to delete file:", error);
